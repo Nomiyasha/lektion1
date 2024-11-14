@@ -1,8 +1,13 @@
 using System.Drawing;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
-
-public class Rectangle
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.FileIO;
+/// <summary>
+/// Class for a rectangle.
+/// </summary>
+public class Rectangle : IShape
 {
     private readonly char  symbol;
     private readonly int  width;
@@ -18,12 +23,19 @@ public class Rectangle
         this.height = height;
         this.pos = pos;
     }
+    public Rectangle(){
+        var other = (Rectangle)In.createShape(this.GetType());
+        this.symbol = other.symbol;
+        this.width = other.width;
+        this.height = other.height;
+        this.pos = other.pos;
+    }
 
     public void Draw(Canvas canvas){
         for(int i =  pos.X; i < pos.X+width; i++){
             for(int j =  pos.Y; j < pos.Y+height; j++){
                 
-                canvas.Draw(symbol,new Position(i,j));
+                canvas.Draw((char)((int)symbol+j),new Position(i,j));
             }
         }
     }
@@ -32,4 +44,5 @@ public class Rectangle
         pos.X += dx;
         pos.Y += dy;
     }
+
 }

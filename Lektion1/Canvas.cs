@@ -42,6 +42,12 @@ public class Canvas
     }
 
     public void Draw(char symbol, Position pos){
-        grid[pos.X,pos.Y] = symbol;
+        try
+        {
+            grid[pos.X,pos.Y] = symbol;
+        }catch{
+            //Do nothing
+        }
+        
     }
 }

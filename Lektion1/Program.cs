@@ -1,14 +1,15 @@
 ﻿namespace Lektion1;
-
+/// <summary>
+/// Program entry point for a drawing program in the console.
+/// </summary>
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Rectangle Drawing Program:\n");
-
-        In In = new In();
-
-        In.Menu();
+        Console.WriteLine("Drawing Program:\n");
+    
+        Logic program = new Logic();
+        
         
     }
 }

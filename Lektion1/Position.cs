@@ -8,6 +8,11 @@ public class Position
         X = x;
         Y = y;
     }
+    public Position(){
+        var other = (Position)In.createShape(this.GetType());
+        this.X = other.X;
+        this.Y = other.Y;
+    }
     
     public Position(Position other)
     {
