@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 class Logic
 {
 
-    private Canvas canvas = new Canvas(15,50);
+    private Canvas canvas = new Canvas(50,15);
     private ShapeLayer shapeLayer = new ShapeLayer();
     public Logic(){
         Run();

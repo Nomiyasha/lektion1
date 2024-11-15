@@ -46,14 +46,14 @@ class ShapeLayer
         }
     }
 
-    public void MoveSel(int dx, int dy)
+    public void MoveSel(int dy, int dx)
     {
         try
         {
             if(Shapes.Count < 1){
             //Do nothing
             }else{
-                Shapes[selIndex].Move(dx,dy);
+                Shapes[selIndex].Move(dy,dx);
             }
         }catch(Exception e){
             Console.WriteLine(e + "  @ "+ selIndex);

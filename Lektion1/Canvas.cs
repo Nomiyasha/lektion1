@@ -9,28 +9,28 @@ public class Canvas
         Height = height;
         Width = width;
 
-        grid = new char[Width, Height];
+        grid = new char[Height, Width];
         Clear();
     }
 
     public void Clear(){
-        for(int i = 0; i < Width; i++){
-            for(int j = 0; j < Height; j++){
+        for(int i = 0; i < Height; i++){
+            for(int j = 0; j < Width; j++){
                 grid[i,j] = ' ';
             }
         }
     }
     public void Render(){
-        for(int i = 0; i < Width+2; i++){
-            for(int j = 0; j < Height+2; j++){
-                if(i == 0 || i == Width+1){
-                    Console.Write("-");
+        for(int i = 0; i < Height+2; i++){
+            for(int j = 0; j < Width+2; j++){
+                if(j == 0 || j == Width+1){
+                    Console.Write("|");
                 }
                 else
                 {
-                    if(j == 0 || j == Height+1)
+                    if(i == 0 || i == Height+1)
                     {
-                    Console.Write("|");
+                    Console.Write("-");
                     
                     }else{
                     Console.Write(grid[i-1,j-1].ToString());  

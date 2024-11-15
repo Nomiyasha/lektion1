@@ -5,5 +5,5 @@ interface IShape
     /// </summary>
     public string Description{get;}
     public void Draw(Canvas canvas);
-    public void Move(int dy, int dx);
+    public void Move(int dx, int dy);
 }

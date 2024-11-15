@@ -32,17 +32,17 @@ public class Rectangle : IShape
     }
 
     public void Draw(Canvas canvas){
-        for(int i =  pos.X; i < pos.X+width; i++){
-            for(int j =  pos.Y; j < pos.Y+height; j++){
+        for(int i =  pos.Y; i < pos.Y+height; i++){
+            for(int j =  pos.X; j < pos.X+width; j++){
                 
                 canvas.Draw(symbol,new Position(i,j));
             }
         }
     }
 
-    public void Move(int dx, int dy){
-        pos.X += dx;
+    public void Move(int dy, int dx){
         pos.Y += dy;
+        pos.X += dx;
     }
 
 }
