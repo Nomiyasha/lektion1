@@ -35,7 +35,7 @@ public class Rectangle : IShape
         for(int i =  pos.X; i < pos.X+width; i++){
             for(int j =  pos.Y; j < pos.Y+height; j++){
                 
-                canvas.Draw((char)((int)symbol+j),new Position(i,j));
+                canvas.Draw(symbol,new Position(i,j));
             }
         }
     }
