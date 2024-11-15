@@ -24,7 +24,6 @@ public class Diamond : IShape
 
     public void Draw(Canvas canvas){
         D(canvas,this.calcSize+1,this.pos);
-        canvas.Draw('§',pos);
     }
     private void D(Canvas canvas, int size, Position pos){
         if (size>0){
