@@ -1,3 +1,4 @@
+namespace Lektion1;
 public class Position
 {
     public int X {get; set;}
@@ -8,16 +9,14 @@ public class Position
         X = x;
         Y = y;
     }
-    public Position(){
-        var other = (Position)In.createShape(this.GetType());
-        this.X = other.X;
-        this.Y = other.Y;
-    }
+    
+    public Position()
+    :this(Input.GetInputType<int>("X position"),
+        Input.GetInputType<int>("Y position"))
+    {    }
     
     public Position(Position other)
-    {
-        X = other.X;
-        Y = other.Y;
-    }
+    :this(other.X,other.Y)
+    {    }
 
 }

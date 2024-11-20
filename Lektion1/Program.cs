@@ -6,9 +6,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Drawing Program:\n");
+        
     
-        Logic program = new Logic();
+        DrawingLogic program = new DrawingLogic();
         
         
     }

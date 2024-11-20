@@ -1,8 +1,8 @@
-using System.Reflection.Metadata;
+namespace Lektion1;
 /// <summary>
 /// Class for handling all different shapes on the canvas
 /// </summary>
-class ShapeLayer
+public class ShapeLayer
 {
     /// <summary>
     /// List of shapes on canvas
@@ -29,14 +29,7 @@ class ShapeLayer
         }
     }
 
-    public void PrintInfo(){
-        Console.WriteLine("List of current rectangles: \n");
-        foreach(IShape shape in Shapes){
-            Console.WriteLine(shape.Description);
-        }
-    }
-
-    public void SelNext(){
+    public void SelectNextShape(){
         selIndex++;
         if(Shapes.Count < 1)
         {
@@ -46,7 +39,7 @@ class ShapeLayer
         }
     }
 
-    public void MoveSel(int dy, int dx)
+    public void MoveSelectedShape(int dy, int dx)
     {
         try
         {
@@ -60,19 +53,19 @@ class ShapeLayer
         }
         
     }
-    public void RemSel(){
+    public void DeleteSelectedShape(){
         if(Shapes.Count > 0){
             Shapes.RemoveAt(selIndex);
             selIndex = (Shapes.Count == 0) ? -1 : --selIndex;
         }
     }
 
-    public void ToTopSel(){
+    public void ToFrontSelectedShape(){
         if(Shapes.Count > 0)
         {
         IShape temp = Shapes[selIndex];
 
-        RemSel();
+        DeleteSelectedShape();
         Add(temp);
         }
         
