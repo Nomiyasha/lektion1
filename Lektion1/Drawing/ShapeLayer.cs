@@ -46,7 +46,7 @@ public class ShapeLayer
             if(Shapes.Count < 1){
             //Do nothing
             }else{
-                Shapes[selIndex].Move(dy,dx);
+                Shapes[selIndex].Move(dx,dy);
             }
         }catch(Exception e){
             Console.WriteLine(e + "  @ "+ selIndex);

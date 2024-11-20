@@ -14,7 +14,7 @@ public class MoveMI : MenuItem
         };
         this.dx = key switch{
             ConsoleKey.LeftArrow => -1,
-            ConsoleKey.RightArrow =>1,
+            ConsoleKey.RightArrow => 1,
             _ => 0
         };
     }

@@ -26,7 +26,7 @@ public class Rectangle : Shape
         for(int i =  Position.Y; i < Position.Y+height; i++){
             for(int j =  Position.X; j < Position.X+width; j++){
                 
-                canvas.Draw(symbol,new Position(i,j));
+                canvas.Draw(symbol,new Position(j,i));
             }
         }
     }
